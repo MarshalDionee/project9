@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <center>
+           <h1>SIMPLE CALCULATOR</h1>
+</center>
+    <div class="box">
+        <h2 id="first">Enter the first number</h2>
+        <center>
+     <input id="input1" type="number" placeholder="Enter the number1"></center>
+     <h2>Enter the second number</h2>
+     <center>
+     <input id="input2" type="number" placeholder="Enter the number2">
+    </center>
+    <h3 id="result">RESULT</h3>
+    <button  onclick="add()" class="one">ADDITION</button>
+    <BUtton onclick="subtract()" class="one">SUBTRACTION</BUtton>
+    <button onclick="multiply()" class="one" id="three">MULTIPLICATION</button>
+    <button onclick="divide()" class="one" id="two">DIVISION</button>
+    </div>
+    <script>
+        function add() {
+            var a = parseFloat(document.getElementById("input1").value);
+            var b = parseFloat(document.getElementById("input2").value);
+            var result = document.getElementById("result");
+            result.textContent = "Result: " + (a + b);
+        }
+
+        function subtract() {
+            var a = parseFloat(document.getElementById("input1").value);
+            var b = parseFloat(document.getElementById("input2").value);
+            var result = document.getElementById("result");
+            result.textContent = "Result: " + (a - b);
+        }
+
+        function multiply() {
+            var a = parseFloat(document.getElementById("input1").value);
+            var b = parseFloat(document.getElementById("input2").value);
+            var result = document.getElementById("result");
+            result.textContent = "Result: " + (a * b);
+        }
+
+        function divide() {
+            var a = parseFloat(document.getElementById("input1").value);
+            var b = parseFloat(document.getElementById("input2").value);
+            var result = document.getElementById("result");
+            if (b !== 0) {
+                result.textContent = "Result: " + (a / b);
+            } else {
+                result.textContent = "Result: Cannot divide by zero";
+            }
+        }
+    </script>
+</body>
+</html>
